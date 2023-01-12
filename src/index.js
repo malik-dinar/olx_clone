@@ -6,9 +6,11 @@ import Context from './store/Context';
 import firebase from './firebase/config';
 
 ReactDOM.render(
-<FirebaseContext.Provider value={{firebase}}>
-    <Context>
-        <App />
-    </Context>
-</FirebaseContext.Provider>
-, document.getElementById('root'));
+    <FirebaseContext.Provider value={{ firebase }}>
+        <Context>
+            <React.StrictMode>
+                <App />
+            </React.StrictMode>
+        </Context>
+    </FirebaseContext.Provider>
+    , document.getElementById('root'));
